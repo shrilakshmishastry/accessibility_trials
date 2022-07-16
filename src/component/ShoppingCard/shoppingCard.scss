@@ -1,0 +1,19 @@
+.shoppingCardParent{
+  display: grid;
+  background-color: grey;
+  height: 5rem;
+  width: 20rem;
+  border: 0.5rem grey solid;
+  grid-template-columns: repeat(2,1fr);
+  // flex-direction: row;
+  .btnContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);    
+    grid-template-rows: repeat(2,1fr);
+ .btn{
+    grid-column: 2/2; 
+    
+  }
+  }
+ 
+}
