@@ -19,6 +19,7 @@ const ShoppingCard = () => {
       // event.stopPropagation();
       window.open("https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column")
     }
+    console.log(parentDiv.current)
     // parentDiv.current.removeEventListener('click',handleParent)
     console.log("btn clicked");
 

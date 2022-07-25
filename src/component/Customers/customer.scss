@@ -1,0 +1,13 @@
+.customerContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 0.01rem;
+  background-color: green;
+}
+
+.mainContentContainer{
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  background-color: antiquewhite;
+}
