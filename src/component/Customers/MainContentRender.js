@@ -13,13 +13,17 @@ const MainContentRender = () => {
       <div className="tabContainer">
         <button onClick={() => {
           setContentToRender(1);
-        }}>
-          Tab1
+        }}
+          className={contentToRender === 1 ? `tabBtn activeBtn` : `tabBtn`}
+        >
+          People
         </button>
         <button onClick={() => {
           setContentToRender(2);
-        }}>
-          Tab2
+        }}
+          className={contentToRender === 2 ? `tabBtn activeBtn` : `tabBtn`}
+        >
+          Companies
         </button>
       </div>
 
