@@ -1,0 +1,36 @@
+$primary-color:#A94779;
+$secondary-color: #5193D5;
+$gray-color:#c6cad6;
+$blue-color:#3948be;
+$brown-color:#483954;
+$info-color:#5193D5;
+$gray-dark:#7A83A0;
+
+.imgLogo{
+  height: 2rem;
+  width: 2rem;
+}
+.navTopCommonStyle{
+  padding: 0.5rem; 
+  padding-bottom: 0.05rem; 
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.nav-active{
+  color: $primary-color; 
+  border-bottom: solid $primary-color 0.2rem;
+  &:hover{
+    color: $primary-color;
+    border-bottom: #000000 0.2rem solid;
+  }
+}
+
+.nav-inactive{
+  color:$gray-dark; 
+  border-bottom: solid #ffffff 0.2rem;
+  &:hover{
+    color: $primary-color;
+    border-bottom: solid $primary-color 0.2rem;
+  }
+}

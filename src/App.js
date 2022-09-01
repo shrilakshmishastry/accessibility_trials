@@ -1,19 +1,13 @@
-import { Link } from "react-router-dom";
+import './App.scss';
+import Topbar from './component/Topbar';
+import GlobalRouter from './router';
 
 function App() {
   return (
-   <nav style={{
-    display:'flex',
-    flexDirection: 'column',
-    gap: '1rem'
-   }}>
-    <Link to={"shopping-card"}>
-      Shopping Card
-    </Link>    
-    <Link to={"customers"}>
-      Customers
-    </Link>
-   </nav>
+    <main>
+      <Topbar />
+      <GlobalRouter />
+    </main>
   );
 }
 
