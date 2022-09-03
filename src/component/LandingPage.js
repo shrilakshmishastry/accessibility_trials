@@ -13,7 +13,10 @@ const LandingPage = () => {
         </Col>
       </Row>
       <Row>
-        <Pagination />
+        <Pagination
+          pageCounterToShow={3}
+          totalNumberOfItems={100}
+          itemsPerPage={5} />
       </Row>
     </Container>
   );
