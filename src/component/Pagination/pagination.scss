@@ -1,0 +1,10 @@
+@import '../../colors';
+.paginationContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.activeBtn{
+  background-color: $primary-color !important;
+  color: #ffffff !important;
+}

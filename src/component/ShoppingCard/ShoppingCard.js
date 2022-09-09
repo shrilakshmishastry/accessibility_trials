@@ -29,22 +29,22 @@ const ShoppingCard = () => {
   return (
     <div ref={parentDiv} tabIndex="-1" onClick={(event) => handleParent(event)} className="shoppingCardParent">
       <div>
-        <p 
-        tabIndex="0"
-         aria-label='navigates to new jockey jersy brief page' 
-         role={'button'}          
-         onClick={(event) => handleParent(event)}>
+        <p
+          tabIndex="0"
+          aria-label='navigates to new jockey jersy brief page'
+          role={'button'}
+          onClick={(event) => handleParent(event)}>
           New jockey jersy
         </p>
       </div>
       <div className='btnContainer'>
         <button
-        aria-label='cancel order of new jersy'
-         onClick={(event) => handleBtnClick(event)} className='btn'>
+          aria-label='cancel order of new jersy'
+          onClick={(event) => handleBtnClick(event)} className='btn'>
           Cancel
         </button>
       </div>
     </div>
   );
 }
-export { ShoppingCard };
+export default ShoppingCard;

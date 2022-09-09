@@ -149,7 +149,7 @@ const LeftNavBar = () => {
             labelsWithContent.map((value, index) => {
               return (
                 <div>
-                  <h3 >
+                  <h6 >
                     <button
                       aria-expanded={handlerVariable[index]}
                       className="innerLabelContiner"
@@ -171,7 +171,7 @@ const LeftNavBar = () => {
                       }
                       <span className="accordionIcon">{value.label}</span>
                     </button>
-                  </h3>
+                  </h6>
                   <div
                     id={`${value.label}region`}
                     aria-labelledby={value.label}
