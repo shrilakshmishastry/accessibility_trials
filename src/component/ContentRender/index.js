@@ -2,37 +2,66 @@ import Pagination from "../Pagination";
 import { useEffect, useState } from "react";
 import { ListOfTrials } from "../../utils/listOfTrials";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import './content.scss';
 
 const ContentRender = () => {
-  const [activenIndex, setActiveIndex] = useState(1);
-  const [arrayLength, setArrayLength] = useState(0)
-  useEffect(() => {
-    const arrayLength = ListOfTrials.length > 5 ? 5 : ListOfTrials.length;
-    setArrayLength(arrayLength);
-  }, [])
-  const handleNextBtnClick = () => {
+  const [activenIndex, setActiveIndex] = useState(0);
+  const [content, setContent] = useState([]);
+  const navigator = useNavigate();
 
-    const arrLen = activenIndex + 5 > ListOfTrials.length ? ListOfTrials.length - (activenIndex + 5) : 5;
-    const actInd = activenIndex + 5 > ListOfTrials.length ? ListOfTrials.length - activenIndex : activenIndex + 5;
-    console.log(activenIndex + 5, ListOfTrials.length);
-    setActiveIndex(actInd);
-    setArrayLength(arrLen);
+
+  useEffect(() => {
+    let inter = [];
+    let endIndex = ListOfTrials.length > 5 ? 5 : ListOfTrials.length;
+    for (let i = 0; i < endIndex; i++) {
+      inter.push(ListOfTrials[i]);
+    }
+    setContent(inter);
+  }, [])
+
+  const handleNextBtnClick = () => {
+    let inter = [];
+    let startIndex = activenIndex + 5 > ListOfTrials.length ? activenIndex + (ListOfTrials.length - activenIndex) : activenIndex + 5;
+    let endIndex = activenIndex + 10 > ListOfTrials.length ? activenIndex + (ListOfTrials.length - activenIndex) : activenIndex + 10;
+    // console.log(startIndex, endIndex);
+    for (let i = startIndex; i < endIndex; i++) {
+      inter.push(ListOfTrials[i]);
+    }
+    setContent(inter);
+    setActiveIndex(activenIndex + 5);
   }
+
+  const handlePreviousClick = () => {
+    let inter = [];
+    let startIndex = activenIndex - 5;
+    let endIndex = activenIndex - 1;
+    for (let i = startIndex; i <= endIndex; i++) {
+      inter.push(ListOfTrials[i]);
+    }
+    setContent(inter);
+    setActiveIndex(activenIndex - 5);
+  }
+
   return (
     <Container>
-      <Row>
+      <Row className="mb-5 mt-3">
         {
-          [...Array(arrayLength).keys()].map((value, index) => {
+          content.map((value) => {
             return (
-              <Col key={ListOfTrials[(activenIndex - 1) + index].title} md={3} lg={4}>
-                <Card>
+              <Col key={value.title} md={3} lg={4}>
+                <Card tabIndex={0} onClick={() => navigator(value.url)} >
+                  <Card.Header className="cardHeaderBg">
+                    <h4 className="text-white">{value.title[0]}</h4>
+                  </Card.Header>
                   <Card.Body>
-                    <Card.Title>
-                      {value}
-                      {ListOfTrials[(activenIndex - 1) + index].title}
+                    <Card.Title className="cardTitle">
+                      {value.title}
                     </Card.Title>
                     <Card.Text>
-                      {ListOfTrials[(activenIndex - 1) + index].description}
+                      {
+                        value.description
+                      }
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -46,11 +75,11 @@ const ContentRender = () => {
           pageCounterToShowInit={3}
           totalNumberOfItems={ListOfTrials.length}
           handleNextBtnClick={() => { handleNextBtnClick() }}
-          handlePreviousBtnClick={() => { setActiveIndex(activenIndex - 5); setArrayLength(5) }}
+          handlePreviousBtnClick={() => { handlePreviousClick() }}
           itemsPerPage={5} />
       </Row>
 
-    </Container>
+    </Container >
   );
 }
 

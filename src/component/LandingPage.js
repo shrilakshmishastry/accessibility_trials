@@ -5,18 +5,9 @@ import Pagination from './Pagination';
 import ContentRender from './ContentRender';
 const LandingPage = () => {
   return (
-    <Container>
-      <Row className='mt-4 '>
-        <Col md={{ span: 12 }}>
-          <h2 className='fw-bold'>
-            The Trials
-          </h2>
-        </Col>
-      </Row>
-      <Row>
-        <ContentRender />
-      </Row>
-    </Container>
+    <Row>
+      <ContentRender />
+    </Row>
   );
 }
 export default LandingPage;
