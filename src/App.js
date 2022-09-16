@@ -15,9 +15,9 @@ function App() {
         {
           location.pathname !== '/about' && <Row className='mt-4 '>
             <Col md={{ span: 12 }}>
-              <h2 className='fw-bold'>
+              <h1 className='fw-bold h2'>
                 The Trials
-              </h2>
+              </h1>
             </Col>
           </Row>
         }

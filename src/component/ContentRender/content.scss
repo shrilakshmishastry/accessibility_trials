@@ -1,5 +1,8 @@
 @import './../../colors';
 
+.cardContainer{
+  height: 10rem !important;
+}
 .cardHeaderBg{
   background-color: $primary-color !important;
 }
