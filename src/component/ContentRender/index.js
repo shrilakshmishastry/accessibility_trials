@@ -50,7 +50,7 @@ const ContentRender = () => {
           content.map((value) => {
             return (
               <Col key={value.title} md={3} lg={4}>
-                <Card tabIndex={0} onClick={() => navigator(value.url)} >
+                <Card className="cardContainer" tabIndex={0} onClick={() => navigator(value.url)} >
                   <Card.Header className="cardHeaderBg">
                     <h4 className="text-white">{value.title[0]}</h4>
                   </Card.Header>
