@@ -1,0 +1,18 @@
+.modal-backdrop-custom{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background-color:  rgba(0, 0, 0, 0.1); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+.modal-alert-custom{
+  padding: 2rem;
+  background-color: #ffffff;
+  width: 50vw;  
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
