@@ -5,10 +5,12 @@ import AlertDialog from "../component/AlertDialog";
 import Customers from "../component/Customers";
 import LandingPage from "../component/LandingPage";
 import ShoppingCard from "../component/ShoppingCard/ShoppingCard";
+import BreadCrumb from "../component/Breadcrumb";
 
 const GlobalRouter = () => {
   return (
     <Routes>
+      <Route path="/breadcrumb" element={<BreadCrumb />} />
       <Route path="/shopping-card" element={<ShoppingCard />} />
       <Route path='/customers' element={<Customers />} />
       <Route path="/about" element={<About />} />

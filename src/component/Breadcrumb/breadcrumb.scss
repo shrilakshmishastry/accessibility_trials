@@ -1,0 +1,24 @@
+.breadcrumbs ol{
+list-style: none;
+display: flex;
+}
+
+
+ ol li+li::before{
+ display: inline-block;
+  margin: 0 0.25em;
+  transform: rotate(15deg);
+  border-right: 0.1em solid currentcolor;
+  height: 0.8em;
+  content: attr(site);
+}
+
+.parent{
+color:#034575;
+text-decoration: underline solid;
+}
+
+.current{
+color: #000000;
+font-weight: bold;
+}
