@@ -12,6 +12,12 @@ const ListOfTrials = [
     componentName: `<AlertDialog/>`
   },
   {
+    title: 'Breadcrumb',
+    description: `A Breadcrumb trial`,
+    url: 'breadcrumb',
+    componentName: `<Breadcrumb/>`
+  },
+  {
     title: 'Customer Dashboard',
     description: `Customer facing dashboard . Built to practice Accordion`,
     url: 'customers',
